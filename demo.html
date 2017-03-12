@@ -5,79 +5,14 @@
     <title>Movie Theater WebVR Virtual Reality Experience Dying Light</title>
     <meta name="author" content="Donovan Kraeker">
     <meta name="description" content="A Movie Theater WebVR virtual reality example website experience using A-Frame designed by Donovan Kraeker">
-    <!--<script src="/aframe-master/dist/aframe-master.js"></script>
-    <script src="https://rawgit.com/mayognaise/aframe-html-shader/master/dist/aframe-html-shader.min.js"></script>-->
-    <script src="http://mayognaise.github.io/aframe-html-shader/build.js"></script>
+    <script src="/aframe-master/dist/aframe-master.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-html-shader/master/dist/aframe-html-shader.js"></script>
+    <!--<script src="http://mayognaise.github.io/aframe-html-shader/build.js"></script>-->
+    <script
+			  src="http://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
 
-    <style type="text/css">
-    #target {
-      width: 512px;
-      height: 256px;
-      position: absolute;
-      background: rgba(255,255,0,0.3);
-    }
-    #htmlTarget.hide {
-      z-index: -1;
-    }
-    #target h1 {
-      font-family: Arial;
-      font-size: 110px;
-      margin: 0;
-      vertical-align: top;
-      color: white;
-    }
-    #target h1 span {
-      color: tomato;
-    }
-    #emoji {
-      position: absolute;
-      font-size: 512px;
-      color: mediumTurquoise;
-      font-style: serif;
-    }
-    #pre {
-      font-family: monospace;
-      margin: 0;
-      padding: 0;
-      height: 50px;
-      font-size: 50px;
-      background: royalblue;
-      color: tomato;
-    }
-    #htmlTarget {
-      position: absolute;
-      z-index: 1;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-    #debug {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-    @media (max-width: 512px) {
-      #target {
-        width: 256px;
-        height: 126px;
-      }
-      #target h1 {
-        font-size: 55px;
-      }
-      #pre {
-        height: 50px;
-        font-size: 25px;
-      }
-      #emoji {
-        position: absolute;
-        font-size: 256px;
-        color: mediumTurquoise;
-      }
-    }
-    body[data-vr="true"] .novr{
-      display: none;
-    }
-    </style>
   </head>
   <body>
     <a-scene>
@@ -142,54 +77,6 @@
       <a-entity id="lettersEntity" geometry="primitive:plane; height: 11; width: 19" position="0 5.5 -8"
             material="shader:html;target:#target;transparent:true;ratio:width;fps:1.5;"></a-entity>
     </a-scene>
-    <div id="htmlTarget" class="hide">
-      <div id="target">
-        <h1><a href="google.com">HELLO</a><span>★</span></h1>
-        <span id="pre">A</span>
-      </div>
-    </div>
-
-
-    <script>
-    var pres = 'A-frame is fun!!!';
-
-    var lettersEntity = document.getElementById('lettersEntity')
-    var pre = document.getElementById('pre')
-    var htmlTarget = document.getElementById('htmlTarget')
-    var scene = document.querySelector('a-scene')
-    if (scene.hasLoaded) { ready() }
-    else { scene.addEventListener('loaded', ready) }
-
-    function ready () {
-      scene.addEventListener('enter-vr', function () { document.body.setAttribute('data-vr', true) })
-      scene.addEventListener('exit-vr', function () { document.body.setAttribute('data-vr', false) })
-      var fps2 = lettersEntity.getAttribute('material').fps
-      console.log(fps2)
-      //updateLetters(0, 1000/fps2)
-      /////////////////////////////
-      var iframe = document.createElement('iframe');
-      iframe.src = "https://www.google.com";
-      //pre.appendChild(iframe);
-      document.getElementById('target').innerHTML = "";
-      document.getElementById('target').appendChild(iframe);
-    }
-    function updateLetters (cnt, fps) {
-      var indexEnd = ++cnt % (pres.length+1)
-      if (pres.charAt(indexEnd) === ' ') {
-        indexEnd = ++cnt % (pres.length+1)
-      }
-      pre.innerHTML = pres.substring(0, indexEnd)
-      setTimeout(updateLetters, fps, cnt, fps)
-      console.log ("Updated...")
-    }
-    function toggleVisibility () {
-      htmlTarget.classList.toggle('hide');
-    }
-    function toggleLettersDebug () {
-      var material = Object.assign({}, lettersEntity.getAttribute('material'))
-      material.debug = !material.debug? '#debug' : ''
-      lettersEntity.setAttribute('material', material)
-    }
-    </script>
+    
   </body>
 </html>
