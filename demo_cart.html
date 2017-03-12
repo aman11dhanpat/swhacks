@@ -9,41 +9,74 @@
 			  src="http://code.jquery.com/jquery-3.1.1.min.js"
 			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 			  crossorigin="anonymous"></script>
-
   </head>
   <body>
     <a-scene>
 
-      <a-box position="-1 -3.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-1 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-1 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-1 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-1 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-3 -3.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-3 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-3 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-3 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="-3 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="1 -3.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="1 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="1 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="1 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="1 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="3 -3.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="3 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="3 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="3 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="3 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="5 -3.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="5 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="5 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="5 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-box position="5 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"></a-box>
-      <a-entity position="1 0 6.8">
-        <a-sky color="#ccc"></a-sky>
-        <a-camera></a-camera>
+      <!--<a-box class="bx" position="-1 6.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-1 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-1 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-1 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-1 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-3 6.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-3 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-3 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-3 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="-3 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="1 6.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="1 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="1 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="1 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="1 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="3 6.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="3 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="3 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="3 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="3 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="5 6.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="5 -1.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="5 0.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="5 2.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>
+      <a-box class="bx" position="5 4.5 1" rotation="0 0 0" width="1.5" height="1.5" depth="0.1" color="#AAAAAA"  material="shader: flat; roughness: 1;"></a-box>-->
+      <a-entity mixin="marker" position="2.5 0.7 0.01"></a-entity>
+      <!-- Terrain -->
+      <a-entity geometry="primitive: plane; height: 500; width: 500" position="0 -2.5 0" rotation="-90 0 0"  material="shader: flat; src: url(images/grass.jpg); repeat: 300 300"></a-entity>
+      <a-entity position="1 0 8.8">
+        <a-sky color="#DDD"></a-sky>
+        <a-camera>
+          <a-cursor></a-cursor>
+        </a-camera>
       </a-entity>
     </a-scene>
+    <script>
+      var idx = 0;
+      var list = document.getElementsByTagName('a-scene')[0];
+      for (var i = -6; i <= 6; i+= 2) {
+        for (var j = -1.5; j <= 7.5 ; j += 3) {
+          var ele = document.createElement('a-box');
+          ele.setAttribute ('class', 'bx');
+          ele.setAttribute ('position', '' + i + ' ' + j + ' 1');
+          ele.setAttribute ('text', '1.5');
+          ele.setAttribute ('height', '1.5');
+          ele.setAttribute ('depth', '0.1');
+          ele.setAttribute ('color', '#AAAAAA');
+          ele.setAttribute ('material', "shader: flat; roughness: 1;");
 
+          list.append (ele);
+          var el = document.createElement('a-text');
+          el.setAttribute ('class', 'bxt');
+          if (j == -1.5)
+            el.setAttribute ('position', '' + (i-0.5) + ' ' + (j-0.80) + ' 1.1');
+          else
+            el.setAttribute ('position', '' + (i-0.5) + ' ' + (j-1.0) + ' 1.1');
+          el.setAttribute ('value', "Hello, USD!");
+          el.setAttribute ('color', "#000");
+          el.setAttribute ('scale', "0.85 0.85 0.85");
+          list.append (el);
+          idx++;
+          console.log ('Element added ' + idx);
+        }
+      }
+    </script>
   </body>
 </html>
